@@ -15,7 +15,7 @@
     2. add the slug to LOCAL_PHOTOS below, e.g.  const LOCAL_PHOTOS = ['heavy-tee-black'];
   Slugs: heavy-tee-black, heavy-tee-stone, boxy-hoodie-grey, core-hoodie-black, utility-pants-black,
          relaxed-pants-stone, shell-jacket-stone, technical-jacket-black, oversized-tee-grey,
-         zip-hoodie-washed, cargo-pants-black, light-shell-grey
+         zip-hoodie-washed, light-shell-grey
 
   Optional per product, only when the data is real — shown as a caption on the MODEL photo:
     model: { height: '182 cm', size: 'M' }
@@ -46,7 +46,6 @@ const PHOTOS = {   // slug: [front, model, detail] — Unsplash photo ids. null 
   'technical-jacket-black': ['1700026707154-8166008042f7', null, null],
   'oversized-tee-grey':     ['1780566759999-4dbaa4218959', '1780566759972-08eecc32ef3c', null],
   'zip-hoodie-washed':      ['1647771746277-eac927afab2c', '1647771746351-7235cf9df865', null],
-  'cargo-pants-black':      ['1548883354-7622d03aca27', null, null],
   'light-shell-grey':       ['1719237414039-577cf52a55a5', null, null]
 };
 const slugOf = name => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -107,10 +106,6 @@ const PRODUCTS = [
    description:'A full-zip hoodie with a garment-washed finish that gets better with every wear.',
    details:['Regular fit','Full-length matte zip','Side seam pockets','Machine wash at 30°C'],
    materials:'100% garment-washed cotton fleece, 380 gsm.'},
-  {id:11, name:'Cargo Pants / Black',      price:119, category:'Pants',    color:'Black',  sizes:WAIST, soldOut:['28','30','36'], isNew:false, isBestseller:false, released:'2026-03-18',
-   description:'Cargo pants with articulated knees and roomy pockets. Relaxed through the leg.',
-   details:['Relaxed fit, tapered hem','Two large cargo pockets','Adjustable ankle drawcord','Machine wash at 30°C'],
-   materials:'100% cotton ripstop, 280 gsm.'},
   {id:12, name:'Light Shell / Grey',       price:135, category:'Jackets',  color:'Grey',   sizes:TOPS,  soldOut:[],               isNew:true,  isBestseller:false, released:'2026-04-25',
    description:'A packable light shell for changing weather. Minimal branding, maximum movement.',
    details:['Regular fit','Packs into its own pocket','Elastic cuffs','Wipe or machine wash at 30°C'],
