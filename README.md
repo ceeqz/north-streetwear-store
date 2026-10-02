@@ -1,5 +1,14 @@
 # NORTH — Streetwear Store (portfolio project)
 
+**Live:** https://north-streetwear-store.netlify.app
+
+**NORTH — streetwear e-commerce concept.** A front-end portfolio project for a fictional minimalist streetwear brand, built with plain HTML, CSS and JavaScript (no frameworks, no build step). Filterable catalog (category, size, price, colour), search and sorting, a product page with image gallery and size guide, and a persistent shopping cart. Fully responsive, with a mobile menu and filter drawer. Checkout is a demo: no payments are connected.
+
+**NORTH — концепт интернет-магазина streetwear-одежды.** Фронтенд-проект для портфолио на чистых HTML, CSS и JavaScript, без фреймворков и сборки. Каталог с фильтрами (категория, размер, цена, цвет), поиск и сортировка, страница товара с галереей и таблицей размеров, корзина, которая сохраняется между посещениями. Адаптивная вёрстка, мобильное меню и панель фильтров. Оформление заказа демонстрационное, платежи не подключены.
+
+Author: ceeqz · License: all rights reserved (see `LICENSE`). Product photos are stock images from Unsplash.
+
+---
 Минималистичный магазин вымышленного бренда. Чистые HTML/CSS/JS, без сборки и библиотек.
 Открыть: `index.html` в браузере (работает офлайн).
 
@@ -33,4 +42,5 @@
 и добавьте slug в `LOCAL_PHOTOS` в `products.js`, например `const LOCAL_PHOTOS = ['heavy-tee-black'];`.
 
 Подпись на model-фото включается данными товара: `model: { height: '182 cm', size: 'M' }`. Нет данных — нет подписи.
+
 
