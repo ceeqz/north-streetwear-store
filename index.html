@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORTH — Contemporary Streetwear</title>
+<meta name="description" content="NORTH is a minimalist contemporary streetwear brand. Quiet silhouettes, heavyweight fabrics, made to move.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="NORTH home">NORTH®</a>
+  <nav class="links" aria-label="Main"><a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+  <div class="nav-right">
+    <button class="nav-btn nav-search" data-search>SEARCH</button>
+    <button class="nav-btn cart-btn" id="cartBtn" aria-label="Open cart">CART (<span id="cartCount">0</span>)</button>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+  <a href="#shop">SHOP</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a>
+  <button data-search>SEARCH</button>
+  <button data-cart>CART (<span id="cartCountM">0</span>)</button>
+</nav>
+
+<main>
+<section class="hero" id="top">
+  <div class="hero-top"><span>COLLECTION 01</span><span>2026</span></div>
+  <div class="hero-main">
+    <h1 id="heroTitle">NORTH</h1>
+    <div class="hero-copy">
+      <p>Contemporary streetwear<br>for everyday movement.</p>
+      <a class="cta" href="#shop">SHOP COLLECTION</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="head reveal"><h2>SHOP</h2><span class="count" id="count" aria-live="polite"></span></div>
+
+  <div class="tools">
+    <div class="cats" id="cats" role="group" aria-label="Categories"></div>
+    <div class="controls">
+      <label class="search-wrap"><span class="visually-hidden">Search products</span><input class="field search" id="search" type="search" placeholder="SEARCH" autocomplete="off"></label>
+      <label class="sort-wrap"><span class="visually-hidden">Sort products</span>
+        <select class="field sort" id="sort">
+          <option value="featured">Featured</option>
+          <option value="newest">Newest</option>
+          <option value="low">Price: Low → High</option>
+          <option value="high">Price: High → Low</option>
+          <option value="name">A → Z</option>
+        </select>
+      </label>
+      <button class="field filter-toggle" id="filterBtn" aria-expanded="false" aria-controls="filterPanel">FILTER<span id="filterN"></span></button>
+    </div>
+  </div>
+
+  <div class="filter-panel" id="filterPanel" role="region" aria-label="Filters">
+    <div class="fp-head"><span>FILTERS</span><button class="close" data-close aria-label="Close filters">×</button></div>
+    <div class="fp-body">
+      <div class="fgroup fcat"><span class="label">Category</span><div class="chips" id="fCat"></div></div>
+      <div class="fgroup"><span class="label">Size</span><div id="fSize"></div></div>
+      <div class="fgroup"><span class="label">Price</span><div class="chips" id="fPrice"></div></div>
+      <div class="fgroup"><span class="label">Color</span><div class="chips" id="fColor"></div></div>
+    </div>
+    <div class="fp-foot"><button class="btn" data-close id="fShow">SHOW ITEMS</button><button class="link-btn" data-clear>CLEAR ALL</button></div>
+  </div>
+
+  <div class="active-bar" id="activeBar" hidden>
+    <span class="label">Filters</span>
+    <div class="active-chips" id="activeChips"></div>
+    <button class="link-btn" data-clear>CLEAR ALL</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>
+    <h3>NO RESULTS</h3>
+    <p id="emptyText"></p>
+    <button class="btn btn-line" id="emptyBtn" data-clear>CLEAR ALL</button>
+  </div>
+</section>
+
+<section class="section manifesto" id="about">
+  <div class="statement reveal">
+    <h2>LESS NOISE.<br>MORE YOU.</h2>
+    <p>NORTH is a contemporary streetwear label built on restraint. Fewer pieces, made properly, designed to be worn for years rather than seasons.</p>
+  </div>
+  <div class="pillars">
+    <article class="pillar reveal"><span class="label">01 — DESIGN</span><p>Quiet silhouettes.<br>Precise proportions.<br>No unnecessary details.</p></article>
+    <article class="pillar reveal"><span class="label">02 — MATERIALS</span><p>Heavyweight fabrics.<br>Purposeful construction.<br>Designed for everyday wear.</p></article>
+    <article class="pillar reveal"><span class="label">03 — WEAR</span><p>Made to move.<br>Made to repeat.<br>Made to become part of your routine.</p></article>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div><b>NORTH®</b><p>Contemporary streetwear.<br>© 2026 NORTH. Fictional brand, portfolio project.<br>Design &amp; development by <a class="credit" href="https://north-streetwear-store.netlify.app">ceeqz</a></p></div>
+  <div class="foot-links"><a href="mailto:ceeqzqwe@gmail.com">ceeqzqwe@gmail.com</a></div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mName">
+  <button class="close" data-close aria-label="Close">×</button>
+  <div class="m-gallery">
+    <div class="m-thumbs" id="mThumbs"></div>
+    <div class="m-main photo" id="mMain"></div>
+  </div>
+  <div class="m-body">
+    <div class="m-top"><span class="cat" id="mCat"></span><span class="badge" id="mBadge"></span></div>
+    <div class="m-title"><h3 id="mName"></h3>
+      <button class="wish" id="mWish" aria-label="Add to wishlist" aria-pressed="false"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 20.5C5 15.2 3 12.3 3 9.3 3 6.9 4.8 5 7.1 5c1.9 0 3.7 1.1 4.9 3 1.2-1.9 3-3 4.9-3C19.2 5 21 6.9 21 9.3c0 3-2 5.9-9 11.2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+    </div>
+    <div class="m-price" id="mPrice"></div>
+    <p class="m-meta"><span id="mColor"></span> · <span id="mStatus"></span></p>
+    <p class="m-desc" id="mDesc"></p>
+    <div class="m-size">
+      <div class="m-size-head"><span class="label" id="mSizeLabel">Size</span><button class="link-btn" id="mGuideBtn" aria-haspopup="dialog" aria-controls="guideModal">SIZE GUIDE</button></div>
+      <div class="sizes" id="mSizes" role="group" aria-label="Size"></div>
+      <div class="err" id="mErr" role="alert"></div>
+      
+    </div>
+    <div class="m-buy">
+      <div class="qty" id="mQty"><button data-q="-1" aria-label="Decrease quantity">−</button><span id="mQtyN">1</span><button data-q="1" aria-label="Increase quantity">+</button></div>
+      <button class="btn" id="mAdd">ADD TO CART</button>
+    </div>
+    <div class="acc">
+      <details open><summary>Details</summary><ul id="mDetails"></ul></details>
+      <details><summary>Materials</summary><p id="mMaterials"></p></details>
+      <details><summary>Shipping &amp; Returns</summary><p id="mShipping"></p></details>
+    </div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><span>CART (<span id="drawerN">0</span>)</span><button class="close" data-close aria-label="Close cart">×</button></div>
+  <div class="items" id="items"></div>
+  <div class="drawer-foot" id="drawerFoot">
+    <div class="row total"><span>SUBTOTAL</span><span id="subtotal"></span></div>
+    <p class="note">Shipping and taxes are calculated at checkout.</p>
+    <button class="btn" id="checkout">CHECKOUT</button>
+  </div>
+</aside>
+
+<div class="gm" id="guideModal">
+  <div class="gm-box" role="dialog" aria-modal="true" aria-labelledby="gmTitle">
+    <div class="gm-head"><span id="gmTitle">SIZE GUIDE</span><button class="close" data-close-guide aria-label="Close size guide">×</button></div>
+    <div class="gd-body" id="guideBody"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Product image">
+  <button class="close" data-close-lightbox aria-label="Close image">×</button>
+  <button class="lb-nav lb-prev" data-lb="-1" aria-label="Previous image">←</button>
+  <div class="lb-img" id="lbImg"></div>
+  <button class="lb-nav lb-next" data-lb="1" aria-label="Next image">→</button>
+  <span class="lb-cap" id="lbCap"></span>
+</div>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
